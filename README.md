@@ -22,10 +22,16 @@ This repository contains the implementation of an Object-Oriented Programming (O
 - **Branch**: `feature/uc3`
 - **Status**: Implemented ✓
 
-### **UC4: Fourth Use Case** ⭐ (LATEST)
+### **UC4: Fourth Use Case**
 - **File**: `uc4.java`
 - **Branch**: `feature/uc4`
 - **Status**: Implemented ✓
+
+### **UC5: Render OOPS as Banner using Inline Array Initialization** ⭐ (LATEST)
+- **File**: `uc5.java`
+- **Branch**: `feature/uc5`
+- **Status**: Implemented ✓
+- **Enhancement**: Uses String.join() for inline array initialization and concise code
 
 ---
 
@@ -37,11 +43,11 @@ This repository contains the implementation of an Object-Oriented Programming (O
 - All other branches originate from this branch
 
 ### **dev** (Development - Latest Version) ⭐
-- Contains the **latest working code** (currently UC4)
+- Contains the **latest working code** (currently UC5)
 - Integrated version of all completed features
 - Use this for testing the latest version
 
-### **feature/uc1, feature/uc2, feature/uc3, feature/uc4**
+### **feature/uc1, feature/uc2, feature/uc3, feature/uc4, feature/uc5**
 - Individual feature branches
 - Each contains **only its respective UC file**
 - Used for isolated development and testing
@@ -50,12 +56,13 @@ This repository contains the implementation of an Object-Oriented Programming (O
 
 ## 📦 Latest Version Information
 
-**Current Latest Version**: UC4
-- **File**: `uc4.java`
-- **Branch**: `feature/uc4` and `dev`
+**Current Latest Version**: UC5
+- **File**: `uc5.java`
+- **Branch**: `feature/uc5` and `dev`
 - **Status**: Ready to use
+- **Key Feature**: Inline array initialization with String.join()
 
-The `dev` branch currently contains only the UC4 implementation, representing the latest production-ready code.
+The `dev` branch currently contains only the UC5 implementation, representing the latest production-ready code.
 
 ---
 
@@ -100,8 +107,11 @@ OOPSBANNERAPP/
 ├── feature/uc4
 │   ├── uc4.java
 │   └── .gitignore
+├── feature/uc5
+│   ├── uc5.java
+│   └── .gitignore
 └── dev
-    ├── uc4.java              (Latest version)
+    ├── uc5.java              (Latest version)
     └── .gitignore
 ```
 
@@ -139,7 +149,8 @@ git checkout feature/uc<number>
 | v1 | UC1 | feature/uc1 | ✓ Complete |
 | v2 | UC2 | feature/uc2 | ✓ Complete |
 | v3 | UC3 | feature/uc3 | ✓ Complete |
-| v4 (Latest) | UC4 | feature/uc4, dev | ✓ Current |
+| v4 | UC4 | feature/uc4 | ✓ Complete |
+| v5 (Latest) | UC5 - Inline Array Init | feature/uc5, dev | ✓ Current |
 
 ---
 
@@ -149,6 +160,27 @@ git checkout feature/uc<number>
 - **Feature branches** maintain isolation - each contains only its own UC code
 - **Dev branch** reflects the latest working implementation
 - When new UCs are added, create `feature/uc<n>` and update `dev` accordingly
+
+---
+
+## 🎯 UC5 Details
+
+**Render OOPS as Banner using Inline Array Initialization**
+
+### Concept:
+Extends UC4 by combining array declaration and initialization with `String.join()` method calls in a single statement, making the code more concise and readable.
+
+### Key Improvements:
+- **Inline Initialization**: Declare and initialize the String array in one statement
+- **Method Invocation**: Use String.join() directly within array initialization
+- **Code Conciseness**: Reduces code volume without sacrificing clarity
+- **Enhanced Readability**: All banner lines visible in one compact structure
+
+### Key Concepts Used:
+- Array Initialization with array literal syntax
+- Inline method calls (String.join())
+- Enhanced For Loop for iteration
+- String concatenation techniques
 
 ---
 
