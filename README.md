@@ -27,11 +27,17 @@ This repository contains the implementation of an Object-Oriented Programming (O
 - **Branch**: `feature/uc4`
 - **Status**: Implemented ✓
 
-### **UC5: Render OOPS as Banner using Inline Array Initialization** ⭐ (LATEST)
+### **UC5: Render OOPS as Banner using Inline Array Initialization**
 - **File**: `uc5.java`
 - **Branch**: `feature/uc5`
 - **Status**: Implemented ✓
 - **Enhancement**: Uses String.join() for inline array initialization and concise code
+
+### **UC6: Refactor Banner Logic into Functions** ⭐ (LATEST)
+- **File**: `uc6.java`
+- **Branch**: `feature/uc6`
+- **Status**: Implemented ✓
+- **Enhancement**: Modular approach using static helper methods (getOPattern(), getPPattern(), getSPattern())
 
 ---
 
@@ -43,11 +49,11 @@ This repository contains the implementation of an Object-Oriented Programming (O
 - All other branches originate from this branch
 
 ### **dev** (Development - Latest Version) ⭐
-- Contains the **latest working code** (currently UC5)
+- Contains the **latest working code** (currently UC6)
 - Integrated version of all completed features
 - Use this for testing the latest version
 
-### **feature/uc1, feature/uc2, feature/uc3, feature/uc4, feature/uc5**
+### **feature/uc1, feature/uc2, feature/uc3, feature/uc4, feature/uc5, feature/uc6**
 - Individual feature branches
 - Each contains **only its respective UC file**
 - Used for isolated development and testing
@@ -56,13 +62,13 @@ This repository contains the implementation of an Object-Oriented Programming (O
 
 ## 📦 Latest Version Information
 
-**Current Latest Version**: UC5
-- **File**: `uc5.java`
-- **Branch**: `feature/uc5` and `dev`
+**Current Latest Version**: UC6
+- **File**: `uc6.java`
+- **Branch**: `feature/uc6` and `dev`
 - **Status**: Ready to use
-- **Key Feature**: Inline array initialization with String.join()
+- **Key Feature**: Modular functions using static helper methods
 
-The `dev` branch currently contains only the UC5 implementation, representing the latest production-ready code.
+The `dev` branch currently contains only the UC6 implementation, representing the latest production-ready code.
 
 ---
 
@@ -110,8 +116,11 @@ OOPSBANNERAPP/
 ├── feature/uc5
 │   ├── uc5.java
 │   └── .gitignore
+├── feature/uc6
+│   ├── uc6.java
+│   └── .gitignore
 └── dev
-    ├── uc5.java              (Latest version)
+    ├── uc6.java              (Latest version)
     └── .gitignore
 ```
 
@@ -150,7 +159,8 @@ git checkout feature/uc<number>
 | v2 | UC2 | feature/uc2 | ✓ Complete |
 | v3 | UC3 | feature/uc3 | ✓ Complete |
 | v4 | UC4 | feature/uc4 | ✓ Complete |
-| v5 (Latest) | UC5 - Inline Array Init | feature/uc5, dev | ✓ Current |
+| v5 | UC5 - Inline Array Init | feature/uc5 | ✓ Complete |
+| v6 (Latest) | UC6 - Modular Functions | feature/uc6, dev | ✓ Current |
 
 ---
 
@@ -163,24 +173,34 @@ git checkout feature/uc<number>
 
 ---
 
-## 🎯 UC5 Details
+## 🎯 UC6 Details
 
-**Render OOPS as Banner using Inline Array Initialization**
+**Refactor Banner Logic into Functions**
 
 ### Concept:
-Extends UC4 by combining array declaration and initialization with `String.join()` method calls in a single statement, making the code more concise and readable.
+Extends UC5 by implementing a modular approach to generate each letter's pattern through dedicated static methods. This enhances code reusability and maintainability by separating pattern generation logic from the main display logic.
+
+### Key Methods:
+- **getOPattern()**: Generates 7-line pattern for letter 'O'
+- **getPPattern()**: Generates 7-line pattern for letter 'P'
+- **getSPattern()**: Generates 7-line pattern for letter 'S'
 
 ### Key Improvements:
-- **Inline Initialization**: Declare and initialize the String array in one statement
-- **Method Invocation**: Use String.join() directly within array initialization
-- **Code Conciseness**: Reduces code volume without sacrificing clarity
-- **Enhanced Readability**: All banner lines visible in one compact structure
+- **Static Methods**: Utility functions that don't require object instantiation
+- **Helper Methods**: Dedicated methods for each character pattern
+- **Method Abstraction**: Encapsulates pattern creation logic for clarity and reuse
+- **DRY Principle**: Eliminates code duplication by centralizing pattern definitions
+- **Modularity**: Separates concerns by creating individual methods for each letter
+- **Reusability**: Same methods can serve other words or characters
+- **Code Composition**: Assembles multiple letter patterns into a complete banner
 
 ### Key Concepts Used:
-- Array Initialization with array literal syntax
-- Inline method calls (String.join())
+- Static Methods for utility functions
+- Helper Methods for pattern generation
+- Method Abstraction and Encapsulation
+- DRY Principle (Don't Repeat Yourself)
+- Array Initialization via Method Calls
 - Enhanced For Loop for iteration
-- String concatenation techniques
 
 ---
 
